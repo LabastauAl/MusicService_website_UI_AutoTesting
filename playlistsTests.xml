@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Work with playlists test scenario" preserve-order="true">
+    <test verbose="2" preserve-order="true" name="Playlists in account" enabled="true">
+        <classes>
+            <class name="smokeTests.ProfilePlaylistsTests">
+                <methods>
+                    <include name="logInToAccount"/>
+                    <include name="createNewPlaylist"/>
+                    <include name="renameNewPlaylist"/>
+                    <include name="addSongsToNewPlaylist"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+<!-- -->
+    <test name="Spotify's playlist" enabled="true">
+        <classes>
+            <class name="smokeTests.GettingSongsFromPlaylist">
+                <methods>
+                    <include name="playlistVerifying"/>
+                    <include name="gettingAllSongs"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

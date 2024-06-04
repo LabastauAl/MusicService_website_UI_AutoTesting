@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Work with login and account tests" preserve-order="true">
+    <test verbose="2" preserve-order="true" name="Base smoke test">
+        <classes>
+            <class name="smokeTests.BaseTestScenario">
+                <methods>
+                    <include name="getAmountOfStartPagePlaylists"/>
+                    <include name="playListVerifying"/>
+                    <include name="pressRandomSongToPlay"/>
+                    <include name="loginToAccount"/>
+                    <include name="checkTheSong"/>
+                    <include name="profileNameVerifying"/>
+                </methods>
+            </class>
+
+            <class name="negativeScenarios.WrongLoginTestCases">
+                <methods>
+                    <include name="logInToAccount"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
